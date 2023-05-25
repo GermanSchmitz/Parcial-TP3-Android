@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">PremierRentCar</string>
+    <string name="forgot_password">Olvide la contraseña</string>
+    <string name="login">Ingresar</string>
+
+</resources>
