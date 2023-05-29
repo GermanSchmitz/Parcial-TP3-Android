@@ -5,7 +5,8 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BottomNavigationActivity">
+    tools:context=".BottomNavigationActivity"
+    >
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView2"
@@ -13,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:defaultNavHost="true"
-        app:navGraph="@navigation/nav_graph" />
+        app:navGraph="@navigation/nav_graph"/>
 
 
 <!--        app:layout_constraintEnd_toEndOf="parent"-->
@@ -21,6 +22,24 @@
 <!--        app:layout_constraintStart_toStartOf="parent"-->
 <!--        app:layout_constraintTop_toTopOf="parent"-->
 <!--        app:layout_constraintVertical_bias="0.0"-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_bar"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            app:itemHorizontalTranslationEnabled="true"
+            app:labelVisibilityMode="auto"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/bottom_bar">
+
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     <com.google.android.material.navigation.NavigationView
@@ -34,18 +53,9 @@
     </com.google.android.material.navigation.NavigationView>
 
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_bar"
-        android:layout_width="match_parent"
-        android:layout_height="66dp"
-        app:itemHorizontalTranslationEnabled="true"
-        app:labelVisibilityMode="auto"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_bar">
 
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
 
 
 </androidx.drawerlayout.widget.DrawerLayout>
+

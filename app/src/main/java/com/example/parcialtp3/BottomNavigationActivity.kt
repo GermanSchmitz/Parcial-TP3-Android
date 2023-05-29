@@ -11,8 +11,8 @@ import com.google.android.material.navigation.NavigationView
 
 class BottomNavigationActivity : AppCompatActivity() {
 
-//    private lateinit var nav_host : NavHostFragment
-//    private lateinit var bottomNav: BottomNavigationView
+    private lateinit var nav_host : NavHostFragment
+    private lateinit var bottomNav: BottomNavigationView
 
     private lateinit var nav_host_drawer: NavHostFragment
     private lateinit var drawer_layout: DrawerLayout
@@ -24,18 +24,22 @@ class BottomNavigationActivity : AppCompatActivity() {
         setContentView(R.layout.activity_bottom_navigation)
 
 
-        // navegacion de botonera
-//        nav_host = supportFragmentManager.findFragmentById(R.id.fragmentContainerView2) as NavHostFragment
-//        bottomNav = findViewById(R.id.bottom_bar)
-//        NavigationUI.setupWithNavController(bottomNav, nav_host.navController)
-
         // NAVEGACION HAMBURGESITA
 
         drawer_layout = findViewById(R.id.drawer_layout)
         navigationView = findViewById(R.id.nav_view)
         nav_host_drawer= supportFragmentManager.findFragmentById(R.id.fragmentContainerView2) as NavHostFragment
 
-       setupDrawerLayout()
+        setupDrawerLayout()
+
+
+
+        // navegacion de botonera
+        nav_host = supportFragmentManager.findFragmentById(R.id.fragmentContainerView2) as NavHostFragment
+        bottomNav = findViewById(R.id.bottom_bar)
+        NavigationUI.setupWithNavController(bottomNav, nav_host.navController)
+
+
 
 
 
