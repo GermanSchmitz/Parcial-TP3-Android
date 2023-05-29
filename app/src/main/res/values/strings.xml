@@ -14,10 +14,9 @@
     <string name="btn_drawer2">Configuración</string>
     <string name="btn_drawer3">Favoritos</string>
 
-
-
-
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="generales">Generales</string>
+    <string name="notificaciones">Notificaciones</string>
+    <string name="modo_oscuro">Modo Oscuro</string>
 
     <!-- TODO: Remove or change this placeholder text -->
 
