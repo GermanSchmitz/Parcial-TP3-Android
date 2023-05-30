@@ -10,7 +10,8 @@ data class Car(
     val make: String,
     val model: String,
     val transmission: String,
-    val year: Int
+    val year: Int,
+    val image: String
 
     /*val city_mpg: Int,
     @SerializedName("class")
