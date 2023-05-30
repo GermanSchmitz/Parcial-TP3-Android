@@ -3,13 +3,13 @@
     <string name="forgot_password">Olvide la contraseña</string>
     <string name="login">Ingresar</string>
 
-<!--    bottom bar -->
+    <!--    bottom bar -->
     <string name="btn_nav_graph">Home</string>
     <string name="btn_nav_graph2">Autos</string>
     <string name="btn_nav_graph3">Buscar</string>
     <string name="btn_nav_graph4">Perfil</string>
 
-<!--    Menu hamburgesa con queso-->
+    <!--    Menu hamburgesa con queso-->
     <string name="btn_drawer">Perfil</string>
     <string name="btn_drawer2">Configuración</string>
     <string name="btn_drawer3">Favoritos</string>
@@ -18,6 +18,8 @@
     <string name="notificaciones">Notificaciones</string>
     <string name="modo_oscuro">Modo Oscuro</string>
     <string name="username">Martín</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <!-- TODO: Remove or change this placeholder text -->
 

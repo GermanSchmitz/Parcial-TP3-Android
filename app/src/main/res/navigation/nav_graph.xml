@@ -8,10 +8,14 @@
         android:id="@+id/item_home"
         android:name="com.example.parcialtp3.fragments.fragment_home"
         android:label="fragment_prueba1"
-        tools:layout="@layout/fragment_prueba1" />
+        tools:layout="@layout/fragment_prueba1" >
+        <action
+            android:id="@+id/action_item_home_to_item_autos"
+            app:destination="@id/item_autos" />
+    </fragment>
     <fragment
         android:id="@+id/item_autos"
-        android:name="com.example.parcialtp3.fragments.fragment_autos"
+        android:name="com.example.parcialtp3.fragments.fragment_auto"
         android:label="fragment_prueba2"
         tools:layout="@layout/fragment_prueba2" />
     <fragment
