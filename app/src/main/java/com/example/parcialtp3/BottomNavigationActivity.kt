@@ -52,9 +52,9 @@ class BottomNavigationActivity : AppCompatActivity() {
 
         NavigationUI.setupActionBarWithNavController(this, navController, drawer_layout)
 
-        navController.addOnDestinationChangedListener{_,_,_ ->
-            supportActionBar?.setHomeAsUpIndicator(R.drawable.icon_option)
-        }
+//        navController.addOnDestinationChangedListener{_,_,_ ->
+//            supportActionBar?.setHomeAsUpIndicator(R.drawable.icon_option)
+//        }
 
 
 

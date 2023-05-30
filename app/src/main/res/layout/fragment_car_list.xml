@@ -12,7 +12,7 @@
         android:layout_weight="1"
         android:layout_marginBottom="16dp"
         android:background="@drawable/input"
-        app:cardBackgroundColor="@color/gray">
+        app:cardBackgroundColor="@color/bgc_frg">
 
         <LinearLayout
             android:layout_width="match_parent"

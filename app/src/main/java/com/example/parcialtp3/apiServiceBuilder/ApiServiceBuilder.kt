@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object ApiServiceBuilder {
     private val BASE_URL = "https://api.api-ninjas.com/v1/"
-    private val API_KEY = ""
+    private val API_KEY = "RkJx8ABXTg4UH0X5tMCrO7sovVYqUsdnaGcohpa7"
 
     private val retrofit: Retrofit = run {
         val okHttpClient = OkHttpClient.Builder()
