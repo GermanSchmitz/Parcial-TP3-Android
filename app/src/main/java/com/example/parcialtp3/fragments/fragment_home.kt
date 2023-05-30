@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
+import androidx.lifecycle.ViewModelProvider
 import com.example.parcialtp3.R
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -33,6 +35,9 @@ class fragment_home : Fragment() {
     lateinit var text1: TextView
     lateinit var text2: TextView
     lateinit var text3: TextView
+
+    private lateinit var carAdapter: CarAdapter
+    private lateinit var carViewModel: CarViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -66,7 +71,39 @@ class fragment_home : Fragment() {
             //val action = fragment_homeDirections.action_item_home_to_item_autos()
             findNavController().navigate(R.id.item_autos)
         }
+
+        // Configurar el RecyclerView y el adaptador
+        val recyclerView: RecyclerView = vista.findViewById(R.id.carRecyclerView)
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        carAdapter = CarAdapter(emptyList())
+        recyclerView.adapter = carAdapter
+
         return vista
+    }
+
+    // Método llamado cuando la vista se ha creado completamente
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // Inicializar el ViewModel
+        carViewModel = ViewModelProvider(this)[CarViewModel::class.java]
+
+        // Observar los cambios en la lista de autos y actualizar el adaptador
+        carViewModel.carList.observe(viewLifecycleOwner) { cars ->
+            carAdapter.updateData(cars ?: emptyList())
+        }
+        // Obtener los datos de los autos
+        fetchData()
+    }
+
+    // Método para obtener los datos de los autos
+    private fun fetchData() {
+        carViewModel.fetchCars()
+
+        // Observar los errores y mostrar un mensaje Toast en caso de error
+        carViewModel.error.observe(viewLifecycleOwner) { errorMessage ->
+            Toast.makeText(requireContext(), errorMessage, Toast.LENGTH_SHORT).show()
+        }
     }
 
     companion object {

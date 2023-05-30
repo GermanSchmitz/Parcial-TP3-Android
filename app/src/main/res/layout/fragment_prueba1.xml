@@ -8,11 +8,27 @@
     android:textAlignment="viewStart"
     tools:context=".fragments.fragment_home">
 
+    <LinearLayout
+        android:id="@+id/linearLayoutInicio"
+        android:layout_width="350dp"
+        android:layout_height="599dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="200dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
     <SearchView
         android:id="@+id/searchView"
         android:layout_width="350dp"
         android:layout_height="50dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="20dp"
         android:background="@android:color/transparent"
         android:focusable="false"
         android:focusableInTouchMode="true"
@@ -25,58 +41,139 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/text1"
+
+    <RelativeLayout
         android:layout_width="350dp"
         android:layout_height="100dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:elevation="8dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        app:cardPreventCornerOverlap="false">
+
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
         android:background="@color/yellow"
+        android:contentDescription="Botón de acción1"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/i_auto" />
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
         android:text="Deportivos"
         android:textAlignment="textStart"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchView" />
+        android:textSize="24sp"/>
+
+    </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="350dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="20dp"
+        android:elevation="8dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        app:cardPreventCornerOverlap="false">
+
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@color/dark_blue"
+        android:contentDescription="Botón de acción1"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/i_suv" />
 
     <TextView
         android:id="@+id/text2"
-        android:layout_width="350dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="20dp"
-        android:background="@color/dark_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
         android:text="SUV"
         android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text1" />
+        android:textSize="24sp"/>
+
+    </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="350dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="20dp"
+        android:elevation="8dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        app:cardPreventCornerOverlap="false">
+
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@color/light_blue"
+        android:contentDescription="Botón de acción1"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/i_electrico" />
 
     <TextView
         android:id="@+id/text3"
-        android:layout_width="350dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="20dp"
-        android:background="@color/light_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
         android:text="ELÉCTRICOS"
         android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text2" />
+        android:textSize="24sp"/>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/marcaRecyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:nestedScrollingEnabled="false"
+    </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="100dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text3" />
+        app:layout_constraintTop_toBottomOf="@+id/text3"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/carRecyclerView"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text3"
+            app:layout_constraintVertical_bias="0.0">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
