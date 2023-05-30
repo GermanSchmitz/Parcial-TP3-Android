@@ -3,6 +3,7 @@ package com.example.parcialtp3.adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.parcialtp3.R
@@ -41,6 +42,7 @@ class CarAdapter(private var carList: List<Car>) : RecyclerView.Adapter<CarAdapt
         private val classTextView: TextView = itemView.findViewById(R.id.classTextView)
         private val fuelTypeTextView: TextView = itemView.findViewById(R.id.fuelTypeTextView)
         private val transmissionTextView: TextView = itemView.findViewById(R.id.transmissionTextView)
+        private val carImageView: ImageView = itemView.findViewById(R.id.carImageView)
 
         // Método para vincular los datos de un objeto Car con las vistas correspondientes
         fun bind(car: Car) {
@@ -49,7 +51,22 @@ class CarAdapter(private var carList: List<Car>) : RecyclerView.Adapter<CarAdapt
             yearTextView.text = car.year.toString()
             classTextView.text = car.carClass
             fuelTypeTextView.text = car.fuel_type
-            transmissionTextView.text = car.transmission
+
+            if (car.transmission == "a") {
+                transmissionTextView.text = "Automatic"
+            } else if (car.transmission == "m") {
+                transmissionTextView.text = "Manual"
+            } else {
+                transmissionTextView.text = "Unknown"
+            }
+
+            // Establece la imagen de la marca en función del nombre de la marca
+            when (car.make.lowercase()) {
+                "honda" -> carImageView.setImageResource(R.drawable.bmw)
+                "toyota" -> carImageView.setImageResource(R.drawable.toyota)
+                "kia" -> carImageView.setImageResource(R.drawable.kia_motors)
+                else -> carImageView.setImageResource(R.drawable.toyota)
+            }
         }
     }
 }
