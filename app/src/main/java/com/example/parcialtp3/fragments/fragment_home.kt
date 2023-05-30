@@ -8,6 +8,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import com.example.parcialtp3.R
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.parcialtp3.adapters.CarAdapter
+import com.example.parcialtp3.adapters.MarcaAdapter
+import com.example.parcialtp3.entities.MarcaRepository
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
